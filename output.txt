@@ -1,1 +1,3 @@
-welcome back 
+Address of val: 0x7ff7b52b538c
+0x7ff7b52b538c
+val: 40
