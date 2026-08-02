@@ -3,7 +3,7 @@ using namespace std;
 
 void fnc(int* &p){
 
-    cout<<p<<endl;
+    *p = NULL;
 
 }
 
@@ -15,7 +15,7 @@ cout<<"Address of val: "<<&val<<endl;
 int* ptr = &val;
 
 fnc(ptr);
-
+cout<<ptr<<endl;
 cout<<"val: "<<val<<endl;
 
 
