@@ -37,6 +37,30 @@ void insert_tail(Node *&head, int val){
     
 }
 
+void insert_any_pos(Node *&head,int pos, int val){
+
+    Node *newNode = new Node(val);
+
+    int sz=0;
+    Node *tmp = head;
+    while (tmp!=NULL)
+    {
+        sz++;
+        tmp=tmp->next;
+    }
+
+    if (pos > sz)return;
+    
+    Node *tmp1 = head;
+    for (int i = 1; i < pos-1 ; i++)
+    {
+       tmp1 = tmp1->next;
+    }
+    
+    newNode->next = tmp1->next;
+    tmp1->next = newNode;
+}
+
 void print_linked_list(Node *head){
 
     Node *tmp = head;
@@ -53,6 +77,8 @@ int main(){
     insert_head(head,3);
     insert_head(head,330);
     insert_tail(head,505);
+    insert_any_pos(head,3,899);
     print_linked_list(head);
+   
 
 }
